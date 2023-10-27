@@ -196,7 +196,7 @@ function Inventory() {
                     modalType={"ADD"}
                 />
             </div>
-            {/* {graphData && <div style={{ height: "30vh", margin: "1em auto", width: "100%" }}> <Bar options={graphOptions} data={graphData} /> </div>} */}
+            {graphData && <div style={{ height: "30vh", margin: "1em auto", width: "100%" }}> <Bar options={graphOptions} data={graphData} /> </div>}
             <Table columns={columns} dataSource={inventory} pagination={{
                 showQuickJumper: true,
                 pageSize: limit || 5,
