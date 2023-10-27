@@ -1,15 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {
-    Button,
-    Cascader,
-    DatePicker,
     Form,
     Input,
     InputNumber,
-    Radio,
     Select,
-    Switch,
-    TreeSelect,
     Modal,
     message
 } from 'antd';
@@ -50,7 +44,7 @@ const InventoryModal = ({
     };
 
     const onFinish = async (values) => {
-        if (modalType == 'ADD') {
+        if (modalType === 'ADD') {
             const { data, message: info } = await callApi(
                 {
                     uriEndPoint: inventoryConfig.add,
@@ -59,7 +53,7 @@ const InventoryModal = ({
             message.success(info)
 
         }
-        if (modalType == "EDIT") {
+        if (modalType === "EDIT") {
             const { data, message: info } = await callApi(
                 {
                     uriEndPoint: inventoryConfig.update,
@@ -72,7 +66,7 @@ const InventoryModal = ({
         setIsOpen(false);
     }
     useEffect(() => {
-        if (modalType == "EDIT") {
+        if (modalType === "EDIT") {
             form.setFieldsValue({ ...modalContent })
         }
         return () => {
