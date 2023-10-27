@@ -102,12 +102,12 @@ const InventoryModal = ({
                     <Form.Item label="Make" name='make' rules={[
                         { required: true }
                     ]}>
-                        <Input placeholder='Company Name' />
+                        <Input placeholder='Company Name' maxLength={15} />
                     </Form.Item>
                     <Form.Item label="Model" name='model' rules={[
                         { required: true }
                     ]}>
-                        <Input placeholder='Model Number' />
+                        <Input placeholder='Model Number' maxLength={15}  />
                     </Form.Item>
                     <Form.Item label="Year" name='year' rules={[
                         { required: true },

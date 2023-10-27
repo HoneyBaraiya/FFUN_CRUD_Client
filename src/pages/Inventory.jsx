@@ -66,8 +66,8 @@ function Inventory() {
                     color = "rgba(121, 211, 172, 0.94)"
                 }
                 return {
-                    label: item._id,
-                    data: [item.count],
+                    label: [item.percentage]+"% " + item._id,
+                    data: [item.percentage],
                     backgroundColor: color,
                 }
             }),
