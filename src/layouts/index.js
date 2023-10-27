@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+  UserOutlined
 } from "@ant-design/icons";
-import { Layout, Menu, Button, theme } from "antd";
-const { Header, Sider, Content } = Layout;
+import { Layout, Menu, theme } from "antd";
+const {  Sider, Content } = Layout;
 const LayoutView = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -31,24 +27,6 @@ const LayoutView = ({ children }) => {
         />
       </Sider>
       <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer,
-            
-          }}
-        >
-          <Button
-            type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: "16px",
-              width: 64,
-              height: 64,
-            }}
-          />
-        </Header>
         <Content
           style={{
             margin: "24px 16px",
