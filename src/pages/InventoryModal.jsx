@@ -110,12 +110,39 @@ const InventoryModal = ({
                         <Input placeholder='Model Number' />
                     </Form.Item>
                     <Form.Item label="Year" name='year' rules={[
-                        { required: true }
+                        { required: true },
+                        {
+                            
+                            validator(rule,value){
+                                return new Promise((resolve,reject)=>{
+                                    if(value<2000 || value>2023)
+                                        reject("The Year should be between 2000 and 2023");
+                                    else
+                                        resolve();
+                                })
+                               
+                            },
+                        
+                        },
+                        
                     ]} >
                         <InputNumber />
                     </Form.Item>
                     <Form.Item label="Price" name='price' rules={[
-                        { required: true }
+                        { required: true },
+                        {
+                            
+                            validator(rule,value){
+                                return new Promise((resolve,reject)=>{
+                                    if(value>500000)
+                                        reject("The price should be within 500000");
+                                    else
+                                        resolve();
+                                })
+                               
+                            },
+                        
+                        },
                     ]}>
                         <InputNumber />
                     </Form.Item>

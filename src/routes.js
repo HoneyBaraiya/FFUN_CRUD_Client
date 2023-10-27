@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import Inventory from "./pages/Inventory";
+
 function Routes() {
   let element = useRoutes([
     {
@@ -9,6 +10,7 @@ function Routes() {
           path: "",
           element: <Inventory />,
         },
+        
       ],
     },
   ]);

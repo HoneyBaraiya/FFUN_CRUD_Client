@@ -14,6 +14,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+
 ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -27,7 +28,7 @@ function Inventory() {
     const [inventory, setInventory] = useState([]);
     const [graphData, setGraphData] = useState(null);
 
-    const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(5);
     const [page, setPage] = useState(1);
     const [search, setSearch] = useState("");
     const [totalCount, setTotalCount] = useState(0);
@@ -84,7 +85,7 @@ function Inventory() {
             title: "No",
             dataIndex: "no",
             key: "no",
-            render: (no) => <a>{no}</a>,
+            render: (no) =><a>{no}</a>,
         },
         {
             title: "Make",
@@ -188,6 +189,7 @@ function Inventory() {
                     setModalType('ADD')
                 }}>ADD Vehicle
                 </Button>
+
                 <InventoryModal
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
