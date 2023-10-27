@@ -11,7 +11,7 @@ const LayoutView = ({ children }) => {
   } = theme.useToken();
   return (
     <Layout>
-      <Sider trigger={null} collapsible collapsed={collapsed}>
+      <Sider trigger={null} collapsible collapsed={collapsed} className="navbar">
         <div className="demo-logo-vertical" />
         <Menu
           theme="dark"
