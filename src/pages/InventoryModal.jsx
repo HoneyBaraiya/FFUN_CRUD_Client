@@ -157,7 +157,7 @@ const InventoryModal = ({
                 </Form>
             </Modal >
         </>
-    );
-};
+    )
+}
 
 export default InventoryModal;

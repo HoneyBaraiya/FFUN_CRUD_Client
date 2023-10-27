@@ -35,6 +35,7 @@ const LayoutView = ({ children }) => {
           style={{
             padding: 0,
             background: colorBgContainer,
+            
           }}
         >
           <Button
@@ -60,6 +61,6 @@ const LayoutView = ({ children }) => {
         </Content>
       </Layout>
     </Layout>
-  );
-};
+  )
+}
 export default LayoutView;

@@ -199,12 +199,12 @@ function Inventory() {
             {graphData && <div style={{ height: "30vh", margin: "1em auto", width: "100%" }}> <Bar options={graphOptions} data={graphData} /> </div>}
             <Table columns={columns} dataSource={inventory} pagination={{
                 showQuickJumper: true,
-                pageSize: limit || 10,
+                pageSize: limit || 5,
                 current: page || 1,
                 total: totalCount,
-            }} onChange={handlePagination} />;
+            }} onChange={handlePagination} />
         </div>
-    );
+    )
 }
 
 export default Inventory;
